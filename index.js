@@ -9,12 +9,12 @@ const app = express();
 const PORT =process.env.PORT|| 8050
 
 app.use(express.json())
-
+app.use(cors())
 app.get("/", async(req, res) => {
     const notes=await UserModel.find()
     res.send(notes)
 })
-app.use(cors())
+
 app.use("/", userController)
 
 
