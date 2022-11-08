@@ -3,6 +3,7 @@ const mongoose = require("mongoose")
 
 const userSchema = new mongoose.Schema({
     user_id : {type : Number},
+    postedAt:{type:String,required : true},
     company : {type : String, required : true},
     city : {type : String, required : true},
     location : {type : String, required : true},
