@@ -25,10 +25,10 @@ userController.post("/create", async (req, res) => {
     })
     try{
         await note.save()
-        res.send("Job Posted")
+        res.send({msg:"Job Posted"})
     }
     catch(err){
-        res.send("Something went wrong")
+        res.send({msg:"Something went wrong"})
     }
 })
 
